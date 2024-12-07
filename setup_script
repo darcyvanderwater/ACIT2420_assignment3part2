@@ -1,0 +1,13 @@
+#!/bin/bash
+
+pacman -Syu
+pacman -S neovim nginx git less --noconfirm
+
+useradd -r -m -d /var/lib/webgen -s /usr/sbin/nologin webgen
+mkdir /var/lib/webgen/bin
+mkdir /var/lib/webgen/documents
+mkdir /var/lib/webgen/HTML
+
+mkdir /etc/nginx/sites-available
+mkdir /etc/nginx/sites-enabled
+
